@@ -1,3 +1,9 @@
+# Birthday countdown timer
+
+This is a simple app that shows remaining days, hours, minutes and seconds left until the entered date 
+(by the initial purpose - the birthday). The selected value is stored in a cookie so the user doesn't have to enter it
+every time the app is opened.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
