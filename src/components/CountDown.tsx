@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useCallback, useEffect, useState} from "react";
+import { useCallback, useEffect, useState } from "react";
 import gearLogo from '../assets/gear-icon.svg';
 
 interface Props {
@@ -8,43 +8,43 @@ interface Props {
 }
 
 const SettingsIconContainer = styled.div`
-  position: relative;;
+    position: relative;;
 `;
 const SettingsIcon = styled.img`
-  position: absolute;
-  right: 0;
-  bottom: 10vh;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 10vh;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 `;
 
 const TimeBeforeBirthdayTitle = styled.div`
-  font-size: 2rem;
+    font-size: 2rem;
 `;
 const CountdownContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
-  margin-top: 2rem;
-`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    margin-top: 2rem;
+`;
 const CountdownNumber = styled.div`
-  //line-height: 2rem;
-  min-height: 3rem;
-  font-size: 2rem;
-`
+    //line-height: 2rem;
+    min-height: 3rem;
+    font-size: 2rem;
+`;
 const CountdownColumnName = styled.div`
-  font-size: 0.75rem;
+    font-size: 0.75rem;
 `;
 
 const BirthdayDate = styled.div`
-  font-family: monospace;
-  //margin-top: 1rem;
-  margin-bottom: 2rem;
+    font-family: monospace;
+    //margin-top: 1rem;
+    margin-bottom: 2rem;
 `;
 
 
-const CountDown = ({birthdate, showSettings}: Props) => {
+const CountDown = ({ birthdate, showSettings }: Props) => {
   const [remainingDays, setRemainingDays] = useState<number>();
   const [remainingHours, setRemainingHours] = useState<number>();
   const [remainingMinutes, setRemainingMinutes] = useState<number>();
@@ -108,7 +108,7 @@ const CountDown = ({birthdate, showSettings}: Props) => {
 
     return () => {
       clearInterval(intervalId);
-    }
+    };
   }, [calculateNumbers]);
 
   return (
@@ -139,7 +139,7 @@ const CountDown = ({birthdate, showSettings}: Props) => {
     </div>
 
 
-  )
-}
+  );
+};
 
 export default CountDown;
